@@ -23,7 +23,7 @@ jobs:
             password: ${{ secrets.DOCKER_SECRET }}
 
         - name: Build Docker image
-          run: docker build -t geonhyukseo/goormback-streaming:${{ github.sha }} .
+          run: docker build -t geonhyukseo/goormnes-streaming:${{ github.sha }} .
 
         - name: Push Docker image
-          run: docker push geonhyukseo/goormback-streaming:${{ github.sha }}
+          run: docker push geonhyukseo/goormnes-streaming:${{ github.sha }}

@@ -12,4 +12,19 @@ const handler = proxy({
 // the endpoint our RTSP uses
 app.ws('/api/stream', handler);
 
+
+app.get('/', (req, res) =>
+  res.send(`
+  <canvas id='canvas'></canvas>
+
+  <script src='${scriptUrl}'></script>
+  <script>
+    loadPlayer({
+      url: 'ws://' + location.host + '/api/stream',
+      canvas: document.getElementById('canvas')
+    });
+  </script>
+`),
+);
+
 app.listen(8080);

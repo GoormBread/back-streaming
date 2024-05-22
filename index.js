@@ -4,7 +4,7 @@ const app = express();
 const { proxy, scriptUrl } = require('rtsp-relay')(app);
 
 const handler = proxy({
-  url: `rtsp://127.0.0.1:8554/mystream`,
+  url: `rtsp://localhost:8554/mystream`,
   // if your RTSP stream need credentials, include them in the URL as above
   verbose: false,
 });

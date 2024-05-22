@@ -1,4 +1,4 @@
-FROM node:latest
+FROM node:16
 
 CMD ["node", "index.js"]
 
@@ -8,4 +8,4 @@ COPY . .
 
 RUN npm install
 
-EXPOSE 8080
+EXPOSE 2000

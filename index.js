@@ -14,14 +14,14 @@ const handler = proxy({
 app.ws('/api/stream', handler);
 
 
-app.get('/test-play/path', (req, res) =>
+app.get('/', (req, res) =>
   res.send(`
   <canvas id='canvas'></canvas>
 
   <script src='${scriptUrl}'></script>
   <script>
     loadPlayer({
-      url: 'ws://' + location.host + '/api/stream',
+      url: 'ws://' + 'localhost:2000' + '/api/stream',
       canvas: document.getElementById('canvas')
     });
   </script>

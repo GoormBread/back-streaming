@@ -14,7 +14,7 @@ const handler = proxy({
 app.ws('/api/stream', handler);
 
 
-app.get('/', (req, res) =>
+app.get('/test-play/path', (req, res) =>
   res.send(`
   <canvas id='canvas'></canvas>
 

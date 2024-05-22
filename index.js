@@ -13,6 +13,7 @@ const handler = proxy({
 // the endpoint our RTSP uses
 app.ws('/api/stream', handler);
 
+
 app.get('/', (req, res) =>
   res.send(`
   <canvas id='canvas'></canvas>

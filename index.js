@@ -20,7 +20,7 @@ app.get('/', (req, res) =>
   <script src='${scriptUrl}'></script>
   <script>
     loadPlayer({
-      url: 'ws://${process.env.WS_PATH}:2000/api/stream',
+      url: 'ws://paran2024.iptime.org/test-play/path/api/stream',
       canvas: document.getElementById('canvas')
     });
   </script>

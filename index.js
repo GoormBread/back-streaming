@@ -22,7 +22,7 @@ app.get('/', (req, res) =>
   <script>
     loadPlayer({
 
-      url: ws://${process.env.MTX_PATH}:8554/api/stream,
+      url: 'ws://${process.env.MTX_PATH}:8554/api/stream',
       canvas: document.getElementById('canvas')
     });
   </script>

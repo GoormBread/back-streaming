@@ -17,11 +17,10 @@ app.ws('/api/stream', handler);
 app.get('/', (req, res) =>
   res.send(`
   <canvas id='canvas'></canvas>
-
   <script src='${scriptUrl}'></script>
   <script>
     loadPlayer({
-      url: 'ws://localhost:2000/api/stream',
+      url: 'ws://${process.env.WS_PATH}:2000/api/stream',
       canvas: document.getElementById('canvas')
     });
   </script>

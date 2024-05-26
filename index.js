@@ -11,22 +11,19 @@ const handler = proxy({
 
 
 // the endpoint our RTSP uses
-// app.ws('/api/stream', handler);
-app.ws('/', handler);
+app.ws('/api/stream', handler);
 
-/*
 app.get('/', (req, res) =>
   res.send(`
   <canvas id='canvas'></canvas>
   <script src='${scriptUrl}'></script>
   <script>
     loadPlayer({
-      url: 'ws://127.0.0.1:2000/api/stream',
+      url: 'ws://paran2024.iptime.org/test-play/path/api/stream',
       canvas: document.getElementById('canvas')
     });
   </script>
 `),
 );
-*/
 
 app.listen(2000);

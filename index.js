@@ -12,7 +12,7 @@ const handler = proxy({
 
 // the endpoint our RTSP uses
 // app.ws('/api/stream', handler);
-app.ws('/', halndler);
+app.ws('/', handler);
 
 /*
 app.get('/', (req, res) =>

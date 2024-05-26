@@ -11,9 +11,10 @@ const handler = proxy({
 
 
 // the endpoint our RTSP uses
-app.ws('/api/stream', handler);
+// app.ws('/api/stream', handler);
+app.ws('/', halndler);
 
-
+/*
 app.get('/', (req, res) =>
   res.send(`
   <canvas id='canvas'></canvas>
@@ -26,5 +27,6 @@ app.get('/', (req, res) =>
   </script>
 `),
 );
+*/
 
 app.listen(2000);

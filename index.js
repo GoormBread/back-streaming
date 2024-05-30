@@ -19,7 +19,7 @@ app.get('/', (req, res) =>
   <script src='${scriptUrl}'></script>
   <script>
     loadPlayer({
-      url: 'ws://paran2024.iptime.org/test-play/path/api/stream',
+      url: 'ws://paran2024.iptime.org/play-groombread/${ process.env.WS_PATH }/api/stream',
       canvas: document.getElementById('canvas')
     });
   </script>

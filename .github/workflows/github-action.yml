@@ -56,6 +56,17 @@ jobs:
             yq eval '.nes-streaming.image.tag = "${{ github.sha }}"' -i ./game-helm/values.yaml
         
 
+        - name: Setup Helm
+          uses: azure/setup-helm@v1
+          with:
+            version: 'v3.5.4'
+  
+        - name: Package Game Helm chart
+          run: |
+            cd game-helm
+            helm package game-helm/
+            helm repo index .
+
         - name: Commit and Push changes
           env:
             GH_PAT: ${{ secrets.GH_PAT }}

@@ -53,7 +53,7 @@ jobs:
         - name: Update values.yaml
           run: |
             cd game-helm
-            yq eval '.nes-streaming.image.tag = "${{ github.sha }}"' -i ./game-helm/values.yaml
+            yq eval '.nesstreaming.image.tag = "${{ github.sha }}"' -i ./game-helm/values.yaml
         
 
         - name: Setup Helm
